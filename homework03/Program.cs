@@ -43,4 +43,14 @@ Console.WriteLine();
 Console.ForegroundColor = ConsoleColor.Green;
 Console.WriteLine("Второй массив - копия первого:");
 PrintArray(secondArray);
-Console.ResetColor();
+Console.ResetColor(); 
+ //но вот короткий вариант тут вроде как и копия и в то же время просто показывает массив
+ int[] arr = { 5, 4, 7, 2, 9 };
+
+		int[] copy = new int[arr.Length];
+		for (int i = 0; i < arr.Length; i++) {
+			copy[i] = arr[i];
+		}
+
+		Console.WriteLine(String.Join(", ", copy));
+	
